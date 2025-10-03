@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jogo da Memória</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="top">
+      <h1>Jogo da Memória</h1>
+      <div class="controls">
+        <div class="info">
+          <span id="moves">Movimentos: 0</span>
+          <span id="timer">Tempo: 00:00</span>
+        </div>
+        <div class="actions">
+          <button id="restart">Reiniciar</button>
+          <select id="difficulty" aria-label="Dificuldade">
+            <option value="4">Fácil (4 pares)</option>
+            <option value="6" selected>Médio (6 pares)</option>
+            <option value="8">Difícil (8 pares)</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section id="board" class="board" aria-live="polite">
+      <!-- Cartas são geradas pelo JavaScript -->
+    </section>
+
+    <div id="winModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="winTitle">
+      <div class="modal-content">
+        <h2 id="winTitle">Você ganhou! 🎉</h2>
+        <p id="winStats"></p>
+        <div class="modal-actions">
+          <button id="playAgain">Jogar novamente</button>
+          <button id="closeModal">Fechar</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">Desenvolvido por você • HTML • CSS • JavaScript</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
